@@ -34,7 +34,9 @@ body {
   letter-spacing: 2px;
 }
 
-.slideCaption > a {
+.slideCaption > a,
+.slideCaption > a:visited,
+.slideCaption > a:active {
   color: white;
   text-decoration: none;
 }
