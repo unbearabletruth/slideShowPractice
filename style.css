@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#container {
+  width: 1000px;
+  display: flex;
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.slideNumber {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.slideCaption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+}
+
+.slideCaption > a {
+  color: white;
+  text-decoration: none;
+}
+
+.slideCaption > a:hover {
+  text-decoration: underline;
+}
+
+#previousButton:hover,
+#nextButton:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#previousButton,
+#nextButton {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  padding: 10px;
+  transition: 0.6s ease;
+}
+
+#previousButton {
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0px 5px 5px 0px; 
+}
+
+#nextButton {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  border-radius: 5px 0px 0px 5px; 
+}
+
+img.nextbutton,
+img.previousbutton {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(90%) saturate(466%) hue-rotate(251deg) brightness(116%) contrast(101%);
+}
+
+#dots {
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: grey;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #404040 !important; 
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.8s;
+}
+
+@keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
